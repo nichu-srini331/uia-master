@@ -63,7 +63,7 @@ function DragnDrop() {
       <Form.Group className="mb-3" controlId="formBasicEmail">
 
         <Form.Label>Addictions</Form.Label>
-        <Form.Control type="name" placeholder="Enter email"  onChange={(e)=>{setaddict(e.target.value)}}/>
+        <Form.Control type="name" placeholder="Enter email" onChange={(e)=>{setaddict(e.target.value)}}/>
         
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicEmail">
