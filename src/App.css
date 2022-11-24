@@ -1,0 +1,66 @@
+
+ /* .App {
+  max-width: 950px;
+ margin: 0 auto;
+} */
+
+/* .intro-wrapper{
+  background-image: url(images/bg4.jpg) !important;
+  margin-top: -30px !important;
+   width: 1270px; 
+   height: 600px;
+   background-repeat: no-repeat;
+   background-size: cover;
+  margin-left: -177px !important ;
+} */
+.nav-box{
+ color:white !important;
+ font-size: 22px !important;
+ margin-left: 20px;
+ font-variant: small-caps !important;
+
+}
+
+.head{
+ width: 1270px;
+ margin-left: -10px;
+ font-variant: small-caps !important;
+ 
+ 
+}
+
+
+
+
+.drag-box{
+ width: 1250px;
+ height: 600px;
+ margin-left: -170px;
+
+}
+.drop-box{
+ width: 400px;
+ height: 200px;
+ margin-top: 30px;
+ background-color: #f2e1fe !important;
+ border: dashed #a971ce;
+ margin-left: 430px;
+}
+
+.drop-box h6{
+ color: #5a5959;
+ font-weight: 400;
+ margin-top: -220px;
+ text-align: center;
+}
+
+.drop-box p{
+ font-size: large;
+ color: #5a5959;
+ text-align: center;
+}
+
+.tool-box{
+ margin-bottom: 30px;
+}
+
