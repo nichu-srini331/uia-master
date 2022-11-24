@@ -7,6 +7,7 @@ import {db, storage} from './firebase'
 import { addDoc, collection } from 'firebase/firestore';
 import {v4} from "uuid"
 import {ref, uploadBytes} from "firebase/storage"
+import { async } from '@firebase/util';
 
 
 
@@ -26,11 +27,11 @@ function DragnDrop() {
     const[img,setImage] = useState([])
 
     
-    const get = () => {
-      // const imageRef = ref(storage,`images/${img.name+v4()}`);
-      // uploadBytes(imageRef,img).then(()=>console.log("success"))
-      console.log("Hi")
-    //  await addDoc(userCollectionRef,{name:name,age:age,addict:addict,gender:gender,ist:ist,medHist:medHist,patid:patid}).then(()=>{alert("success")})
+    const get = async (e) => {
+      e.preventDefault()
+      const imageRef = ref(storage,`images/${img.name+v4()}`);
+     uploadBytes(imageRef,img).then(()=>console.log("success"))
+     await addDoc(userCollectionRef,{name:name,age:age,addict:addict,gender:gender,ist:ist,medHist:medHist,patid:patid}).then(()=>{alert("success")})
     }
   const{getRootProps,getInputProps}=useDropzone({
     accept: "image/*",
@@ -58,11 +59,11 @@ function DragnDrop() {
         <div className='App' >
           
           
-          <Form>
+          <Form >
       <Form.Group className="mb-3" controlId="formBasicEmail">
 
         <Form.Label>Addictions</Form.Label>
-        <Form.Control type="name" placeholder="Enter email" onChange={(e)=>{setaddict(e.target.value)}}/>
+        <Form.Control type="name" placeholder="Enter email"  onChange={(e)=>{setaddict(e.target.value)}}/>
         
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -100,7 +101,7 @@ function DragnDrop() {
       <Button variant="primary" type="submit">
         Submit
       </Button>
-      <button onClick={()=>{console.log("hiiiiii")}}>SUBMIT HERE</button>
+      <button onClick={(e)=>{get(e)}}>SUBMIT HERE</button>
     </Form>
     <div id="tool">
           <div className="drag-box">
