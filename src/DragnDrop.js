@@ -9,10 +9,6 @@ import {v4} from "uuid"
 import {ref, uploadBytes} from "firebase/storage"
 import { async } from '@firebase/util';
 
-
-
-
-
 function DragnDrop() {
   // const userCollectionRef = collection(db,"patients")
   const userCollectionRef = collection(db,"patients")
